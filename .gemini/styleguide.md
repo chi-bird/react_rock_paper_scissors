@@ -1,3 +1,48 @@
+## Project Style Guide
+
+This project follows pragmatic, readable TypeScript + React standards. When in doubt, choose clarity over cleverness.
+
+### Directory Structure
+- `src/lib/`: Pure business logic and utilities (framework-agnostic). Avoid React imports here.
+- `src/components/`: Presentational + container components. Keep them small and focused.
+- `src/styles/`: Global styles (if needed). Co-locate component styles when simple.
+- `test/`: Shared test utilities and mocks.
+
+### Naming
+- Use descriptive names. Avoid abbreviations.
+- Functions: verbs (e.g., `determineWinner`). Variables: nouns (e.g., `playerChoice`).
+- Types and enums use PascalCase. Constants use UPPER_SNAKE_CASE when truly constant.
+
+### TypeScript
+- Exported/public APIs must have explicit types.
+- Prefer union literal types and enums to encode domain constraints.
+- No `any`. If unavoidable, isolate and document the reason.
+
+### React
+- Functional components with explicit props types.
+- Accessibility first: add `aria-label`, associate labels with controls, ensure focus order.
+- State colocated near usage; lift only when necessary.
+- Avoid deep prop chains; create small components.
+
+### Control Flow
+- Prefer early returns over nested branches.
+- Handle errors and edge cases first.
+
+### Comments
+- Explain "why" not "how". Keep concise. Avoid redundant comments.
+
+### Formatting
+- Follow Prettier-like formatting: multiline for readability, wrap long lines, avoid complex one-liners.
+- Do not reformat unrelated code in edits.
+
+### Testing
+- Use Jest + React Testing Library.
+- Unit-test pure logic in `src/lib/`.
+- Component tests focus on user interactions and accessibility roles.
+
+### Commits
+- One logical change per commit. Use imperative messages (e.g., "Add janken logic").
+
 # chibird React/TypeScript Style Guide
 
 ## General Instructions

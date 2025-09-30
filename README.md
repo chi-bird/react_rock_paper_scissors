@@ -1,4 +1,37 @@
-# React + TypeScript + Vite
+# じゃんけんゲーム (React + TypeScript + Vite)
+
+シンプルな「じゃんけん」アプリ。プレイヤーが手を選ぶと、コンピュータがランダムに手を選び、勝敗とスコアを表示します。アクセシビリティに配慮しています。
+
+## セットアップ
+
+```bash
+npm install
+```
+
+## 開発サーバ
+
+```bash
+npm run dev
+```
+
+## テスト
+
+```bash
+npm test
+npm run test:watch
+npm run test:coverage
+```
+
+## 構成
+
+- `src/lib/game.ts`: 勝敗判定ロジック（純粋関数）
+- `src/components/`: UI コンポーネント（`Game`, `ChoiceButton`, `Scoreboard`）
+- `test/`: Jest/RTL セットアップとモック
+- `.gemini/styleguide.md`: 本プロジェクトのスタイルガイド
+
+## スタイルガイド準拠
+
+コーディング規約、命名、ディレクトリ構成は `.gemini/styleguide.md` に従っています。改善提案があれば PR を歓迎します。
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
